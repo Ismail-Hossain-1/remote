@@ -80,8 +80,32 @@ class _SearchPageState extends State<SearchPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Recent Searches:', style: TextStyle(fontWeight: FontWeight.bold)),
+                    const Text('Recent Searches:', style: TextStyle(color: Color(0xffcc8f31), fontWeight: FontWeight.bold)),
+                    ElevatedButton(
+                      onPressed: _clearRecentSearches,
+                      child: const Text(
+                        'Clear Recent Searches',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xfa574406),
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        //backgroundColor: Colors.redAccent, // A more refined shade of red
+                        //foregroundColor: Colors.white, // Text color
+                        padding: EdgeInsets.symmetric(vertical: 12, horizontal: 20), // Add padding for better button sizing
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8), // Rounded corners for a modern look
+                        ),
+                        shadowColor: Colors.black45, // Shadow color for a more elevated effect
+                        elevation: 5,
+                        // Subtle shadow for elevation
+                      ),
+                    ),
+
                     const SizedBox(height: 10),
+
                     ListView.builder(
                       shrinkWrap: true,
                       physics: NeverScrollableScrollPhysics(),
@@ -92,13 +116,7 @@ class _SearchPageState extends State<SearchPage> {
                         );
                       },
                     ),
-                    ElevatedButton(
-                      onPressed: _clearRecentSearches,
-                      child: const Text('Clear Recent Searches'),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.red,
-                      ),
-                    ),
+
                   ],
                 ),
               ),

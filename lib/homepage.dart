@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:remote/menwomen.dart';
+import 'package:remote/profilepage.dart';
+import 'package:remote/searchpage.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -11,11 +13,11 @@ class _HomePageState extends State<HomePage> {
 
   // List of screens for each tab
   List<Widget> _pages = [
-    ProfileScreen(),
     HomeScreen(),
     SearchScreen(),
     ShopScreen(),
     LikesScreen(),
+    ProfileScreen(),
   ];
 
   // Method to handle tab selection
@@ -45,10 +47,6 @@ class _HomePageState extends State<HomePage> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
-            label: 'Profile',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.search),
             label: 'Search',
           ),
@@ -59,6 +57,10 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
             label: 'Likes',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle),
+            label: 'Profile',
           ),
         ],
       ),
@@ -83,14 +85,14 @@ class HomeScreen extends StatelessWidget {
 class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Profile Screen'));
+    return ProfilePage();
   }
 }
 
 class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Search Screen'));
+    return Center(child: SearchPage());
   }
 }
 
