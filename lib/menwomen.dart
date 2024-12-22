@@ -153,7 +153,8 @@ class _CategoryPageState extends State<CategoryPage> {
                       child: ClipRRect(
                         //borderRadius: BorderRadius.circular(5), // Clip corners to match the container
                         child: Material(
-                          color: Colors.white, // Card color
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),// Card color
                           child: Center(
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -165,7 +166,8 @@ class _CategoryPageState extends State<CategoryPage> {
                                       'NEW IN',
                                       style: TextStyle(
                                         fontSize: 30,
-                                        fontWeight: FontWeight.bold,
+                                        fontStyle: FontStyle.italic,
+                                        fontWeight: FontWeight.w400,
                                       ),
                                     ),
                                   ),
@@ -220,7 +222,8 @@ class _CategoryPageState extends State<CategoryPage> {
                                       'CLOTHING',
                                       style: TextStyle(
                                         fontSize: 30,
-                                        fontWeight: FontWeight.bold,
+                                        fontStyle: FontStyle.italic,
+                                        fontWeight: FontWeight.w400,
                                       ),
                                     ),
                                   ),
@@ -275,7 +278,8 @@ class _CategoryPageState extends State<CategoryPage> {
                                       'HILLS',
                                       style: TextStyle(
                                         fontSize: 30,
-                                        fontWeight: FontWeight.bold,
+                                        fontStyle: FontStyle.italic,
+                                        fontWeight: FontWeight.w400,
                                       ),
                                     ),
                                   ),
